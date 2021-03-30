@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/pytorch:19.08-py3
+FROM nvcr.io/nvidia/pytorch:20.08-py3
 # Install basics
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
@@ -30,7 +30,6 @@ RUN pip install pynvml
 RUN pip install nvidia-ml-py3==7.352.0
 RUN pip install face-alignment dlib
 RUN pip install av
-RUN pip install hparams
 
 # Install correlation.
 COPY imaginaire/third_party/correlation correlation
